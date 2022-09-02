@@ -11,8 +11,8 @@ assigned a vehicle and shift(morning/afternoon). Morning shift is 8 am - 11:55 a
 1. Create a database with all appropriate tables, constraints, and relationships.
 2. The database should be normalised to at least 2NF.
 3. The tables should be populated.
-4. Create SQL queries to:
-4.1 Get the location of any vehicle and its driver at any hour during the working day.
+4. Create SQL queries to:\
+4.1 Get the location of any vehicle and its driver at any hour during the working day.\
 4.2 Get the number of parcels delivered by any specific driver during a day's work.
 
 ## Overview of the design process
