@@ -60,4 +60,55 @@ they have delivered.
 
 ![image](https://user-images.githubusercontent.com/60928508/188202695-69baf74e-8528-4222-b808-d504c3ad734c.png)
 
+# Queries implementation
+
+The queries that have been implemented are:
+
+-Listing of all drivers\
+-Listing of all drivers that have only driven during morning hours\
+-Number of parcels delivered by any specific driver during day’s work\
+-The location of any vehicle and its driver at any hour during the working day\
+
+Listing of all drivers:
+
+To get all the drivers. The build-in SELECT command has been used to get columns first_name and
+last_name from drivers table. These two have been merged into one column called “Names” and
+sorted by the first name and last_name respectively for an organised output.
+
+Listing of all drivers that have only driven during morning hours: 
+
+To get all the drivers that have only driven during morning hours the JOIN command had to be used
+to join shift_id and weekly_shift tables. A common column has to be present to join two tables
+together; shift_id shared driver_id with the drivers table; weekly_shift shared shift_id columns with
+shift_id table. Now that 3 tables have been connected all information could be combined, drivers
+first_name and last_name have been selected and merged as “Name”, date from weekly_shift table
+and shift from weekly_shift. For the final result, the WHERE command has been used to filter the
+output by shift being only Morning. Lastly, to make everything output nicely the ORDER command
+has been used to sort the output by date, first name and last name respectively.
+
+Number of parcels delivered by any specific driver during day’s work:
+
+To get a number of parcels delivered by any specific driver during a day’s work, similarly to the query
+above the following information had to be found out: Date, Vehicle_ID who’s driving that vehicle
+and the count of parcels that they have delivered. These tables have been connected together
+shift_id, weekly_shift, shift and driver to know who’s driving what vehicle at what day. After that, all
+of these have been connected to the location_track table and the following columns have been
+selected: date, first_name, last_name and delivered_status. Because each driver only had one parcel
+per day, the count of delivered would be 1 if they have successfully delivered a parcel and 0 if they
+did not. Everything has been ordered by location and then first_name to get an organised output.
+
+The location of any vehicle and its driver at any hour during the working day:
+
+To get the location of any vehicle and its driver at any hour during the working day the following had
+to be found out: Who’s driving what car, at what day and what shift they’re doing. The last table
+already had the time, vehicle_ID and Location. The first table connected was shift_id, to get the shift,
+driver_id and vehicle_id this has been connected with weekly_shift and shift using primary keys that
+they have all shared. These 3 tables gave most of the necessary information, now these had to be
+connected to the drivers table to get the name of driver_id. Lastly, all of these have been connected
+to location_track. Date, time, vehicle_id, first_name, last_name and locations have been selected
+for the appropriate output. The WHERE command has been used to get the correct time depending
+on the shift e.g. 9 o clock is between the hours of morning, so that would know it’s a morning shift
+and only return drivers that are doing morning shift on that day. All have been ordered by location
+and then time.
+
 
