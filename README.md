@@ -69,7 +69,7 @@ The queries that have been implemented are:
 -Number of parcels delivered by any specific driver during day’s work\
 -The location of any vehicle and its driver at any hour during the working day\
 
-Listing of all drivers:
+### Listing of all drivers:
 
 To get all the drivers. The build-in SELECT command has been used to get columns first_name and
 last_name from drivers table. These two have been merged into one column called “Names” and
