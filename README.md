@@ -70,13 +70,11 @@ The queries that have been implemented are:
 -The location of any vehicle and its driver at any hour during the working day\
 
 ### Listing of all drivers:
-
 To get all the drivers. The build-in SELECT command has been used to get columns first_name and
 last_name from drivers table. These two have been merged into one column called “Names” and
 sorted by the first name and last_name respectively for an organised output.
 
-Listing of all drivers that have only driven during morning hours: 
-
+### Listing of all drivers that have only driven during morning hours
 To get all the drivers that have only driven during morning hours the JOIN command had to be used
 to join shift_id and weekly_shift tables. A common column has to be present to join two tables
 together; shift_id shared driver_id with the drivers table; weekly_shift shared shift_id columns with
@@ -86,8 +84,7 @@ and shift from weekly_shift. For the final result, the WHERE command has been us
 output by shift being only Morning. Lastly, to make everything output nicely the ORDER command
 has been used to sort the output by date, first name and last name respectively.
 
-Number of parcels delivered by any specific driver during day’s work:
-
+### Number of parcels delivered by any specific driver during day’s work
 To get a number of parcels delivered by any specific driver during a day’s work, similarly to the query
 above the following information had to be found out: Date, Vehicle_ID who’s driving that vehicle
 and the count of parcels that they have delivered. These tables have been connected together
@@ -97,8 +94,7 @@ selected: date, first_name, last_name and delivered_status. Because each driver 
 per day, the count of delivered would be 1 if they have successfully delivered a parcel and 0 if they
 did not. Everything has been ordered by location and then first_name to get an organised output.
 
-The location of any vehicle and its driver at any hour during the working day:
-
+### The location of any vehicle and its driver at any hour during the working day
 To get the location of any vehicle and its driver at any hour during the working day the following had
 to be found out: Who’s driving what car, at what day and what shift they’re doing. The last table
 already had the time, vehicle_ID and Location. The first table connected was shift_id, to get the shift,
