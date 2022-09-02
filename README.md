@@ -4,7 +4,7 @@ Vehicle tracking MySQL database schema for a parcel delivery company
 # Scenario
 A delivery company wants to build a system that is going to track its vehicles and drivers
 throughout the working day - each vehicle is fitted with a GPS. At the start of any day, drivers are
-assigned a vehicle and shift(morning/afternoon). Morning shift is 8 am - 11:55 am and afternoon shift is 12 pm - 4pm.There are 10 drivers, 5 vehicles and data is to be entered for a week.
+assigned a vehicle and shift(morning/afternoon). Morning shift is 8 am - 11:55 am and afternoon shift is 12 pm - 4pm. There are 10 drivers, 5 vehicles and data is to be entered for a week.
 
 ## Company's requirements
 
